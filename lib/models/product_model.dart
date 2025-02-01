@@ -22,6 +22,7 @@ class product_model {
         title: jsondata['title'],
         price: jsondata['price'],
         description: jsondata['description'],
-        image: jsondata['image']);
+        image: jsondata['image'],
+        rating: rating_model.fromjson(jsondata['rating']));
   }
 }

@@ -1,10 +1,10 @@
-class rating_mode {
+class rating_model {
   final double rate;
   final int count;
 
-  rating_mode({required this.rate, required this.count});
+  rating_model({required this.rate, required this.count});
 
-  factory rating_mode.fromjson(jsondata) {
-    return rating_mode(rate: jsondata['rate'], count: jsondata['count']);
+  factory rating_model.fromjson(jsondata) {
+    return rating_model(rate: jsondata['rate'], count: jsondata['count']);
   }
 }

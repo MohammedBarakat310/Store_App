@@ -1,10 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:store_app/helpers/Api.dart';
 import 'package:store_app/models/product_model.dart';
 
 class get_all_products {
-  final dio = Dio();
   Future<List<product_model>> getallproducts() async {
-    Response response = await dio.get('https://fakestoreapi.com/products');
+    Response response =
+        await Api().get(url: 'https://fakestoreapi.com/products');
 
     List<dynamic> data = response.data;
 
@@ -17,5 +18,7 @@ class get_all_products {
         ),
       );
     }
+
+    return products;
   }
 }
